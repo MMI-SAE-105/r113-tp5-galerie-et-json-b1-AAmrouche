@@ -9,6 +9,12 @@
 
 <style>
 
+body {
+    font-family: "sans-serif";
+    background-color: rgb(177, 169, 169);
+    background: linear-gradient(to left, rgb(172, 169, 169), rgb(78, 70, 70));
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -25,7 +31,7 @@
     content: "X";
     color: #fff;
     background-color: #000;
-    font-family: "sans-serif";
+    font-family: "roboto";
     text-align: center;
     line-height: 2rem;
     display: block;
@@ -49,21 +55,35 @@
     height: auto;
 }
 
+.image {
+    border: 2px solid #000;
+    border-radius: 6%;
+}
+
 </style>
 <body x-data="{chiot:null}">
 
     <h1>Galerie</h1>
-<p>lorem⇥</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore molestias suscipit culpa, distinctio aliquid doloremque recusandae odio exercitationem rem omnis similique totam non, libero consequuntur unde eligendi ea necessitatibus.</p>
 <div class="overlay" 
     x-show="chiot"
     @click="chiot=null"
     @keyup.escape.window="chiot=null">
     <figure><img :src="chiot" alt="image 237... un chiot"></figure>
 </div>
-<img src="https://picsum.photos/id/237/400/300" alt="miniature de chiot" 
-@click="chiot = 'https://picsum.photos/id/237/400/300'">
-<img src="https://picsum.photos/id/238/400/300" alt="miniature de chiot"
-@click="chiot = 'https://picsum.photos/id/238/400/300'">
+
+<img class="image" src="https://picsum.photos/id/162/80/100" alt="miniature de plage" 
+@click="chiot = 'https://picsum.photos/id/162/400/300'">
+<img class="image" src="https://picsum.photos/id/211/80/100" alt="miniature de bateau"
+@click="chiot = 'https://picsum.photos/id/211/400/300'">
+<img class="image" src="https://picsum.photos/id/184/80/100" alt="Miniature de Dune de sable" 
+@click="chiot = 'https://picsum.photos/id/184/400/300'">
+<img class="image" src="https://picsum.photos/id/199/80/100" alt="miniature de plage de sable blanc"
+@click="chiot = 'https://picsum.photos/id/199/400/300'">
+<img class="image" src="https://picsum.photos/id/176/80/100" alt="miniature de Phare" 
+@click="chiot = 'https://picsum.photos/id/176/400/300'">
+<img class="image" src="https://picsum.photos/id/164/80/100" alt="Miniature de Venise"
+@click="chiot = 'https://picsum.photos/id/164/400/300'">
 
 </body>
 </html>
