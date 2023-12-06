@@ -9,7 +9,13 @@
 <body>
     <h1>Json</h1>
     <ul x-data="{
-        données: [
+        async données () {
+            const resp = await fetch('data.json');
+            return await resp.json();
+        },
+    }">
+    <ul x-data="{
+        obj: [
             {
                 nom:'Jean',
                 projet:'Alpine.js',
@@ -28,10 +34,10 @@
             }
         ],
     }">
-    <template x-for="donnee in donnees">
+    <template x-for="donnee of obj.json">
         <li>
-            <span> x-text="donnee_nom">nom</span>
-            <a :href="donnee.url" x-text="donnee.projet">projet</a>
+            <span> x-text="obj.nom">nom</span>
+            <a :href="obj.url" x-text="obj.projet">projet</a>
         </li>
     </template>
     </ul>
