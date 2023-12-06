@@ -14,9 +14,9 @@
             return await resp.json();
         },
     }">
-    <template x-for="obj in donnée">
+    <template x-for="obj of données">
         <li>
-            <span> x-text="obj.nom">nom</span>
+            <span x-text="obj.nom">nom</span>
             <a :href="obj.url" x-text="obj.projet">projet</a>
         </li>
     </template>
