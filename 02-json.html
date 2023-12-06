@@ -14,27 +14,7 @@
             return await resp.json();
         },
     }">
-    <ul x-data="{
-        obj: [
-            {
-                nom:'Jean',
-                projet:'Alpine.js',
-                url:'https://alpinejs.dev/',
-
-            },
-            {
-                nom:'Maxime',
-                projet:'Tailwind CSS',
-                url:'https://tailwindcss.com/',
-            },
-            {
-                nom: 'Adam',
-                projet: 'Laravel',
-                url
-            }
-        ],
-    }">
-    <template x-for="donnee of obj.json">
+    <template x-for="obj in donnée">
         <li>
             <span> x-text="obj.nom">nom</span>
             <a :href="obj.url" x-text="obj.projet">projet</a>
