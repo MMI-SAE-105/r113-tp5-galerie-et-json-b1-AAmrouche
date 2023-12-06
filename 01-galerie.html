@@ -78,11 +78,22 @@ body {
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
 }
+.retour{
+    text-align: center;
+    border: 2px solid #000;
+    padding: 1;
+    margin: 1rem;
+    background-color: rgb(221, 181, 156);
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
 
 
 </style>
 <body x-data="{chiot:null}">
-
+    <a class="retour" href="/index.html">Retour à l'acceuil</a>
     <h1 class="titre">Galerie</h1>
 <p class="texte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore molestias suscipit culpa, distinctio aliquid doloremque recusandae odio exercitationem rem omnis similique totam non, libero consequuntur unde eligendi ea necessitatibus.</p>
 <div class="overlay" 
@@ -90,7 +101,9 @@ body {
     @click="chiot=null"
     @keyup.escape.window="chiot=null">
     <figure><img :src="chiot" alt="image 237... un chiot"></figure>
+    
 </div>
+
 <div class="images">
     <img class="image" src="https://picsum.photos/id/162/80/100" alt="miniature de plage" 
     @click="chiot = 'https://picsum.photos/id/162/400/300'">
