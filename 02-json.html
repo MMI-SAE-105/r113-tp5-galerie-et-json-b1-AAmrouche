@@ -7,6 +7,33 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
-    
+    <h1>Json</h1>
+    <ul x-data="{
+        données: [
+            {
+                nom:'Jean',
+                projet:'Alpine.js',
+                url:'https://alpinejs.dev/',
+
+            },
+            {
+                nom:'Maxime',
+                projet:'Tailwind CSS',
+                url:'https://tailwindcss.com/',
+            },
+            {
+                nom: 'Adam',
+                projet: 'Laravel',
+                url
+            }
+        ],
+    }">
+    <template x-for="donnee in donnees">
+        <li>
+            <span> x-text="donnee_nom">nom</span>
+            <a :href="donnee.url" x-text="donnee.projet">projet</a>
+        </li>
+    </template>
+    </ul>
 </body>
 </html>
